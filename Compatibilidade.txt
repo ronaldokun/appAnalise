@@ -1,0 +1,16 @@
+Aplicação desenvolvida no Matlab R2020b (Update 3).
+
+Notas em relação à execução da aplicação em versões anteriores do Matlab.
+- Matlab R2020a (Update 6):
+
+Unrecognized property Icon for class UIFigure.
+Unrecognized property TitleHorizontalAlignment for class Axes.
+Error using title: Incorrect number of input arguments
+Error using images.roi.Rectangle/set: Unrecognized property EdgeAlpha for class Rectangle.
+
+Comentários:
+Todos os erros estão relacionados a inovações trazidas no Matlab R2020b. O ícone do app é o mais simples, sendo resolvido pelo próprio App Designer. Os outros devem passar por edição. Em relação ao título, a função title não aceita Subtítulo, assim como alinhamento. O mesmo pra ROI que não possui a propriedade do EdgeAlpha.
+
+No mais, aparentemente, o app funciona como esperado.
+
+11/02/2021
