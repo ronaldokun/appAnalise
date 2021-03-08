@@ -12,7 +12,7 @@ DataPoints 14848
 ScanTime 0.025
 Detector 
 TraceMode MaxHold
-Node RFeye002239
+Node EB500
 ThreadID 20
 ScriptName CRFS default method
 Description Pico medio em 1 minuto SLMA2
