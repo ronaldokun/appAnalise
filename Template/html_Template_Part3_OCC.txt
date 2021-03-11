@@ -1,0 +1,10 @@
+<p class="Item_Nivel2" contenteditable="false">Por fim, a seguir s&atilde;o indicados os par&acirc;metros relacionados &agrave; defini&ccedil;&atilde;o do <i>threshold</i> de cada fluxo de dados cuja ocupa&ccedil;&atilde;o foi aferida no p&oacute;s-processamento (ao inv&eacute;s de aferida na pr&oacute;pria coleta).</p>
+
+<ul style="margin-left: 80px;">
+	<li class="Item_Inciso_Romano">
+	<p class="Texto_Justificado" contenteditable="false"><i>Threshold</i>: %s (tipo), %d minutos (tempo de integra&ccedil;&atilde;o) e %d dB (<i>offset</i>).</p>
+	</li>
+	<li>
+	<p class="Texto_Justificado" contenteditable="false">Estimativa do piso de ru&iacute;do: <i>%s</i> (fun&ccedil;&atilde;o estat&iacute;stica), %d%% de amostras descartadas e %d%% de amostras &uacute;teis.</p>
+	</li>
+</ul>

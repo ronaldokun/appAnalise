@@ -1,0 +1,33 @@
+<table class="tabela_corpo" id="tabela%d">
+	<caption>
+	<p class="Tabela_Texto_8"><strong>Tabela %d. Informa&ccedil;&otilde;es da monitora&ccedil;&atilde;o.</strong></p>
+	</caption>
+	<thead>
+		<tr>
+			<th style="width: 10px;">
+			<p class="Tabela_Texto_8" contenteditable="false">#</p>
+			</th>
+			<th style="width: 80px;">
+			<p class="Tabela_Texto_8" contenteditable="false">Receptor</p>
+			</th>
+			<th style="width: 60px;">
+			<p class="Tabela_Texto_8" contenteditable="false">In&iacute;cio da monitora&ccedil;&atilde;o</p>
+			</th>
+			<th style="width: 60px;">
+			<p class="Tabela_Texto_8" contenteditable="false">T&eacute;rmino da monitora&ccedil;&atilde;o</p>
+			</th>
+			<th style="width: 80px;">
+			<p class="Tabela_Texto_8" contenteditable="false">Frequ&ecirc;ncia &nbsp;inicial</p>
+			</th>
+			<th style="width: 80px;">
+			<p class="Tabela_Texto_8" contenteditable="false">Frequ&ecirc;ncia &nbsp;final</p>
+			</th>
+			<th style="width: 80px;">
+			<p class="Tabela_Texto_8" contenteditable="false">Passo da &nbsp;varredura</p>
+			</th>
+			<th>
+			<p class="Tabela_Texto_8" contenteditable="false">Outros par&acirc;metros</p>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
