@@ -2,7 +2,7 @@
 
 <ul style="margin-left: 80px;">
 	<li class="Item_Inciso_Romano">
-	<p class="Texto_Justificado" contenteditable="false">Crit&eacute;rio 1: na curva de tend&ecirc;ncia central (obtida pela fun&ccedil;&atilde;o <i>mediana</i> ou <i>m&eacute;dia</i>), identificam-se os picos espa&ccedil;ados entre si de uma dist&acirc;ncia m&iacute;nima (em kHz), desde que cada um desses picos tenha uma proemin&ecirc;ncia m&iacute;nima (em dB) em rela&ccedil;&atilde;o &agrave; vizinhan&ccedil;a e uma largura de banda superior a uma largura m&iacute;nima (em kHz).</p>
+	<p class="Texto_Justificado" contenteditable="false">Crit&eacute;rio 1: na curva de tend&ecirc;ncia central (obtida pela fun&ccedil;&atilde;o <i>mediana</i> ou <i>m&eacute;dia</i>), identificam-se os picos espa&ccedil;ados entre si de uma dist&acirc;ncia m&iacute;nima (em kHz), desde que cada um desses picos tenha uma proemin&ecirc;ncia m&iacute;nima (em dB) em rela&ccedil;&atilde;o &agrave; vizinhan&ccedil;a e ocupe uma banda superior a uma largura m&iacute;nima (em kHz).</p>
 	</li>
 	<li>
 	<p class="Texto_Justificado" contenteditable="false">Crit&eacute;rio 2: na curva de m&aacute;ximo, aplica-se a mesma metodologia descrita no "Crit&eacute;rio 1" acrescida de uma avalia&ccedil;&atilde;o da ocupa&ccedil;&atilde;o dos picos.</p>
