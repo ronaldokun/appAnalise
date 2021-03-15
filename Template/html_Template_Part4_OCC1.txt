@@ -1,4 +1,4 @@
-<p class="Texto_Justificado" contenteditable="false">A ocupa&ccedil;&atilde;o, aferida no p&oacute;s-processamento, considerou os par&acirc;metros indicados a seguir na defini&ccedil;&atilde;o do n&iacute;vel %.0f %s como <i>threshold</i>. O tempo de integra&ccedil;&atilde;o foi igual a %d minutos.</p>
+<p class="Texto_Justificado" contenteditable="false">A ocupa&ccedil;&atilde;o, aferida no p&oacute;s-processamento, considerou os par&acirc;metros indicados a seguir na defini&ccedil;&atilde;o do n&iacute;vel %.0f %s como <i>threshold</i>. O tempo de integra&ccedil;&atilde;o foi igual a %d segundos.</p>
 
 <ul style="margin-left: 20px;">
 	<li class="Item_Inciso_Romano">
