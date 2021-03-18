@@ -30,7 +30,7 @@
 # (d) "Relatando" >> "Relatada"
 #  31 (UF/Municipio)
 #  57 (Serviços da inspeção)
-#  69 (Qtd. emissões na faixa)
+#  69 (*)Qtd. emissões na faixa)
 #  70 (Emissões não autorizadas/desconhecidas)
 #  91 (Horas de preparação)
 #  92 (Horas de deslocamento)
@@ -42,44 +42,79 @@
 # 154 (Ação de risco à vida criada?)
 # 450 ("Impossibilidade acesso online?!" - CAMPO NÃO APLICÁVEL À FISCALIZAÇÃO)    
 
+# tracker_id
+# 1: inspeção
+
+# status_id
+# 1: "Em rascunho"
+ 
+
+
+
+URL    = 'https://sistemas.anatel.gov.br/fiscaliza/'
+URLHM  = 'https://sistemashm.anatel.gov.br/fiscaliza'
+URLHM2 = 'http://sistemasnethm/fiscaliza'
+
+
 from redminelib import Redmine
 
-def connFcn(LOGIN, PASSWORD):
+def connFcn(LOGIN, PASSWORD, teste=False):
+
+    url = URLHM if teste else URL
     
-    redmineObj = Redmine('https://sistemashm.anatel.gov.br/fiscaliza/', username=LOGIN, password=PASSWORD)
+    redmineObj = Redmine(url, username=LOGIN, password=PASSWORD)
     
     return redmineObj
 
 
 def getFcn(redmineObj, ISSUE):
     
-    issue = redmineObj.issue.get(ISSUE)
+    # issue = redmineObj.issue.get(ISSUE)
+    issue = redmineObj.issue.get(ISSUE, include=['id', 
+                                                 'subject', 
+                                                 'tracker',
+                                                 'status', 
+                                                 'priority', 
+                                                 'start_date', 
+                                                 'due_date', 
+                                                 'custom_fields', 
+                                                 'journals'])
+    
     pyInfo = dict({'id': issue.id,
-                   'tracker_id': issue.tracker.id,
-                   'status_id': issue.status.id,
+                   'subject': issue.subject,
+                   'tracker': issue.tracker.id,
+                   'status': issue.status.id,
+                   'priority': issue.priority.id,
+                   'startdate': issue.start_date,
+                   'duedata': issue.due_date,
                    'customFields': issue.custom_fields._resources, 
-                   'journalNotes': issue.journals._resources})
+                   'journalNotes': [issue.journals._resources[-1].created_on, 
+                                    issue.journals._resources[-1].user.name]})
     
     return pyInfo, issue
 
 
 def issue2users(redmineObj: Redmine, issue: str)-> dict:
     """Recebe objeto Redmine e string issue com o número da issue e retorna um dicionário com os usuários do grupo Inspeção-Execução"""
-    
-    proj = redmineObj.issue.get(issue).project.name
+    proj = redmineObj.issue.get(issue).project.name.lower()
     members = redmineObj.project_membership.filter(project_id=proj)
     id2name = {}
     name2id = {}
+    names = []
     for member in members:
-        for role in member.get('roles', []):
-            if str(role) == 'Inspeção-Execução':
-                if hasattr(member, 'user'):
-                    user = getattr(member, 'user')
-                    if hasattr(user, 'id') and hasattr(user, 'name'):
-                        id2name[user.id] = user.name
-                        name2id[user.name] = user.id
-    
+        if roles := getattr(member, 'roles', []):
+            for role in roles:
+                if str(role) == 'Inspeção-Execução':
+                    if user := getattr(member, 'user', None):
+                        if (id_ := getattr(user, 'id', None)) and (name := getattr(user, 'name', None)):
+                            names.append((id_, name))
+                            
+    names.sort(key=lambda x: x[1])
+    id2name = dict(names)
+    name2id = {v:k for k,v in id2name.items()}
     return id2name, name2id
+
+
 
 
 def setFcn(redmineObj, ISSUE, Flag, redValues, cfValues):
