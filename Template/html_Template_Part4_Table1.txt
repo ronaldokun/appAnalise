@@ -20,7 +20,7 @@
 			<p class="Tabela_Texto_8" contenteditable="false"><strong>Proemin&ecirc;ncia m&iacute;nima</strong></p>
 			</th>
 			<th scope="col">
-			<p class="Tabela_Texto_8" contenteditable="false"><strong>Ocupa&ccedil;&atilde;o m&iacute;nima</strong></p>
+			<p class="Tabela_Texto_8" contenteditable="false"><strong>M&iacute;nima ocupa&ccedil;&atilde;o m&aacute;xima</strong></p>
 			</th>
 		</tr>
 	</thead>
