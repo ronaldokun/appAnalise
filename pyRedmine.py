@@ -51,7 +51,7 @@
 
 
 
-URL    = 'https://sistemas.anatel.gov.br/fiscaliza/'
+URL    = 'https://sistemas.anatel.gov.br/fiscaliza'
 URLHM  = 'https://sistemashm.anatel.gov.br/fiscaliza'
 URLHM2 = 'http://sistemasnethm/fiscaliza'
 
