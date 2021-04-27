@@ -23,7 +23,7 @@ if nargin < 2
 end
 
 %% Set up the Import Options and import the data
-opts = delimitedTextImportOptions("NumVariables", 5);
+opts = delimitedTextImportOptions("NumVariables", 5); 
 
 % Specify range and delimiter
 opts.DataLines = dataLines;
