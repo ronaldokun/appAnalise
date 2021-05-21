@@ -1,4 +1,4 @@
-function htmlSet = Fcn_htmlSet(filename, dataLines)
+function htmlSet = Misc_htmlSet(filename, dataLines)
 %IMPORTFILE Import data from a text file
 %  HTMLENTITYBASICSET = IMPORTFILE(FILENAME) reads data from text file
 %  FILENAME for the default selection.  Returns the data as a table.

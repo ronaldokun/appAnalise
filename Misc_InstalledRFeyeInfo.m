@@ -1,4 +1,4 @@
-function nodeTable = Fcn_nodeTable(filename, dataLines)
+function nodeTable = Misc_InstalledRFeyeInfo(filename, dataLines)
 %IMPORTFILE Import data from a text file
 %  NODETABLE = IMPORTFILE(FILENAME) reads data from text file FILENAME
 %  for the default selection.  Returns the data as a table.
